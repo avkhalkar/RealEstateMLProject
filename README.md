@@ -12,7 +12,7 @@ RealEstateMLProject/
 ├── BHP.csv # Dataset used
 └── README.md # Project overview
 
-## 🚀 Workflow
+## Workflow
 
 1. **User Input**  
    The user enters details like location, BHK, sqft, etc. via the front-end interface.
@@ -52,7 +52,7 @@ RealEstateMLProject/
 -**Testing and Prediction**:Define a custom function for prediction and testing
 -**Saving**:Model is saved as pickle file
 
-## 📦 How to Run
+## How to Run
 
 1. Clone the repo:
 
