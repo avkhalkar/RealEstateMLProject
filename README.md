@@ -61,13 +61,13 @@ RealEstateMLProject/
    git clone https://github.com/avkhalkar/RealEstateMLProject.git
 
 
-Set up a virtual environment and install dependencies, provided in requirements.txt and pythonversion.txt.
+Set up a virtual environment and install dependencies, provided in requirements.txt and latest Python version.
 
 Run the Flask server:
 
 cd Server
-python app.py
-Open Client/index.html in a browser to access the UI.
+python server.py
+Open Client/index.html using Open With live server in a browser to access the UI.
 
 ## Screenshot of the web app
 

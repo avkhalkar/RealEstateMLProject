@@ -1,5 +1,6 @@
 import pickle
 import json
+import os
 import numpy as np
 
 import warnings
@@ -9,6 +10,10 @@ warnings.filterwarnings("ignore")
 __locations = None
 __data_columns = None
 __model = None
+
+# Artifacts folder resolved relative to this file, so the server
+# can be started from any working directory
+ARTIFACTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "artifacts")
 
 def get_estimated_price(location,sqft,bhk,bath):
     
@@ -36,7 +41,7 @@ def load_saved_artifacts():
     global  __data_columns
     global __locations
 
-    with open("./Server./artifacts/columns.json", "r") as f:
+    with open(os.path.join(ARTIFACTS_DIR, "columns.json"), "r") as f:
 
         # Loading the columns
         __data_columns = json.load(f)['data_columns']
@@ -48,7 +53,7 @@ def load_saved_artifacts():
     # Loading model
     global __model
     if __model is None:
-        with open('./Server./artifacts/banglore_home_prices_model.pickle', 'rb') as f:
+        with open(os.path.join(ARTIFACTS_DIR, 'banglore_home_prices_model.pickle'), 'rb') as f:
             __model = pickle.load(f)
     print("loading saved artifacts...done")
 
